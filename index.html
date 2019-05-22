@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Hello World</title>
+   <script language="JavaScript">
+    var iCallID;
+    function InitializeService(){
+     service.useService(http://localhost:1394/MyWebService.asmx?wsdl,
+   "HelloWorldService");
+     service.HelloWorldService.callService("HelloWorld");
+    }
+    function ShowResult(){
+     alert(event.result.value);
+    }
+   </script>
+  </head>
+ <body onload="InitializeService()" id="service"
+   style="behavior:url(webservice.htc)" onresult="ShowResult()"> </body>
+</html>
